@@ -1,0 +1,64 @@
+header{
+    nav.navbar-syngenta{
+        padding: 20px 0 50px 0;
+        background: rgb(51,50,49);
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 18%, rgba(15, 15, 15, 0.3) 46%, rgba(0, 0, 0, 0) 81%);
+        position: fixed;
+        width: 100%;
+        z-index: 999;
+        padding: 15px 0;
+        transition: all ease-in-out .2s;
+        ul.nav{
+            justify-content: center;
+            align-items: center;
+            padding: 15px 0 0 0;
+            li{
+                a{
+                    display: inline-block;
+                    height: 50px;
+                    margin: 0 10px;
+                    font-size: .9rem;
+                    padding: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-decoration: none;
+                    color: var(--white);
+                    font-weight: 400;
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    img{
+                        margin-bottom: 2px;
+                    }
+                    
+                }
+                &:nth-child(2){
+                    a img{
+                        margin-bottom: 8px;
+                    }
+                }
+            }
+            @media only screen and (min-width: 768px){
+                padding: 0;
+                li a{
+                    padding: 0 10px;
+                }
+            }
+        }
+        &.blank_nav{
+            background: none;
+            background-color: #fff;
+            transition: all ease-in-out .2s;
+            ul.nav{
+                li a{
+                    color: var(--blue-syngenta);
+                    img{
+                        opacity: 1;
+                    }
+                    
+                }
+            }
+        }
+    }
+}
