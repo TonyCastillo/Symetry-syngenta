@@ -507,6 +507,36 @@ section.seeker {
     font-size: 1.8rem;
   }
 }
+.symetry-sections .slider-content {
+  position: relative;
+}
+.symetry-sections .slider-content::after {
+  content: "";
+  width: calc(100% + 150px);
+  height: calc(100% + 150px);
+  position: absolute;
+  top: -50px;
+  left: 0;
+  background-image: url(/assets/img/lupa.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.symetry-sections .slider-content .carousel-indicators {
+  position: absolute;
+  bottom: -30px;
+}
+.symetry-sections .slider-content .carousel-indicators button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin: 3px;
+  border: none;
+  background-color: #94b8dd;
+}
+.symetry-sections .slider-content .carousel-indicators button.active {
+  background-color: var(--blue-syngenta);
+}
 
 .waves-backgroud {
   position: absolute;
