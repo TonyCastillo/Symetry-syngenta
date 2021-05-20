@@ -198,24 +198,103 @@ section.seeker{
   span{
     color: var(--blue-syngenta);
   }
+  &.white{
+    h2{
+      color: #fff;
+    }
+    span{
+      color: rgb(182, 182, 182);
+    }
+  }
 }
-.table-formulacion{
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  .col-formulacion{
-    .box-title{
-      h4{
-        border: solid 1px red;
-        width: 100%;
-        height: 50px;
-        position: relative;
-        &::after{
-          content: '';
-          width: 20%;
-          height: 2px;
-          background-color: blue;
-          position: absolute;
+
+.col-formulacion{
+  .box-title{
+    h4{
+      width: 100%;
+      height: 50px;
+      position: relative;
+      &::after, &::before{
+        content: '';
+        width: 20%;
+        height: 2px;
+        background-color: var(--blue-syngenta);
+        position: absolute;
+      }
+      &::after{
+        left: 20px;
+      }
+      &::before{
+        right: 20px;
+      }
+      span{
+        width: 2px;
+        height: 50%;
+        position: absolute;
+        left: 20px;
+        bottom: 0;
+        background-color: var(--blue-syngenta);
+        &:last-child{
+          left: inherit;
+          right: 20px;
+
         }
+      }
+    }
+  }
+}
+.box-images{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  .item{
+    padding: 0 2px;
+    width: 100%;
+    height: 300px;
+    h2.title{
+      background-color: rgb(36, 193, 199);
+      padding: 10px 0;
+      color: #fff;
+      font-size: 1.2rem;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    img{
+      width: 250px;
+      height: 200px;
+      object-fit: contain;
+      object-position: center center;
+    }
+  }
+  &.two-columns{
+    grid-template-columns: 1fr;
+    .item img{
+      width: 50%;
+    }
+  }
+}
+
+section.video{
+  width: 100%;
+  padding: 50px 0 100px;
+  background-color: #00244A;
+}
+.recomedaciones-boxes{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  justify-content: center;
+  .box-item{
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    border: solid 1px red;
+    .text{
+      p{
+        margin: 0 !important;
+      }
+      p:first-child{
+        font-weight: 900;
+        font-size: 1.2rem;
+        margin-bottom: 15px;
       }
     }
   }
