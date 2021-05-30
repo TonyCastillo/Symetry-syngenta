@@ -270,7 +270,7 @@ section.seeker{
     }
     img{
       width: auto;
-      height: 100px;
+      height: 130px;
       object-fit: contain;
       object-position: center center;
     }
@@ -297,14 +297,14 @@ section.video{
   justify-content: center;
   .box-item{
     display: grid;
-    grid-template-columns: 70px 1fr;
+    grid-template-columns: 100px 1fr;
     align-items: center;
     min-height: 100px;
     &:last-child{
       justify-self: center;
     }
     img{
-      width: 50px;
+      width: 100%;
     }
     .text{
       p{
